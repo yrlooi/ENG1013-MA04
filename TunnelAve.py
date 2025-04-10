@@ -2,7 +2,7 @@ from pymata4 import pymata4
 from PushButton import pushButton
 import time
 
-def tunnelAve(boardInput,tL4, pL1, bP1,bP2):
+def tunnelAve(boardInput,tL4, pL1, bP1):
     """
         Executes the Tunnel Ave Control Subsystem
 
@@ -52,9 +52,8 @@ def tunnelAve(boardInput,tL4, pL1, bP1,bP2):
 
             while True:
                 buttonState1 = pushButton(boardInput,bP1)
-                buttonState2 = pushButton(boardInput,bP2)
 
-                if buttonState1 == 1 or buttonState2==1:
+                if buttonState1 == 1:
                     print("Pedestrian push button PB1 is pressed.")
                     time.sleep(2)
 
